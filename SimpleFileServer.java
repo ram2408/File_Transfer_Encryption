@@ -9,10 +9,10 @@ import java.net.Socket;
 public class SimpleFileServer {
 
   public final static int SOCKET_PORT = 13267;  // you may change this
-  static String FILE_TO_SEND = "c:/temp/source.pdf";  // you may change this
+  static String FILE_TO_SEND = "tmp.cpp";  // you may change this
 
   public static void main (String [] args ) throws IOException {
-    FILE_TO_SEND = args[0];  
+    FILE_TO_SEND = args[0];   // pass file name through command line arguments
     System.out.println(args.length);
     FileInputStream fis = null;
     BufferedInputStream bis = null;
