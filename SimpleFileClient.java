@@ -9,7 +9,7 @@ public class SimpleFileClient {
 
   public final static int SOCKET_PORT = 13267;      // you may change this
   public final static String SERVER = "127.0.0.1";  // localhost
-  static String FILE_TO_RECEIVED = "c:/temp/source-downloaded.pdf";  // you may change this, I give a
+  static String FILE_TO_RECEIVED = "";  // you may change this, I give a
                                                             // different name because i don't want to
                                                             // overwrite the one used by server...
 
@@ -23,8 +23,8 @@ public class SimpleFileClient {
     FileOutputStream fos = null;
     BufferedOutputStream bos = null;
     Socket sock = null;
-    FILE_TO_RECEIVED = args[0];
-    try {
+    FILE_TO_RECEIVED = args[0]; // pass the name of the receiving file through command line arguments e.g java SimpleFileClient Filename
+     try {
       sock = new Socket(SERVER, SOCKET_PORT);
       System.out.println("Connecting...");
 
